@@ -11,6 +11,9 @@ parted --script /dev/sda mkpart primary ext4 512MiB 100%
 mkfs.fat -F 32 -n boot /dev/sda1
 mkfs.ext4 -q -L nixos /dev/sda2
 
+# Wait for formatting to complete
+sleep 1
+
 # Installing
 mount /dev/disk/by-label/nixos /mnt
 mkdir -p /mnt/boot
