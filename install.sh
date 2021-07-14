@@ -19,4 +19,5 @@ mount /dev/disk/by-label/nixos /mnt
 mkdir -p /mnt/boot
 mount /dev/disk/by-label/boot /mnt/boot
 
+# Generate NixOS configuration
 nixos-generate-config --root /mnt
